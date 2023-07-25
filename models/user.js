@@ -23,7 +23,14 @@ const userSchema = new Schema(
       enum: subscripVersion,
       default: "starter",
     },
-    token: String,
+    token: {
+      type: String,
+      default: "",
+    },
+    avatarUrl: {
+      type: String,
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
